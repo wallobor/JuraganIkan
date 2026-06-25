@@ -112,7 +112,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":4415312,"index.wasm":43699190},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":4415392,"index.wasm":43699190},"focusCanvas":true,"gdextensionLibs":[],"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -147,6 +147,15 @@ const engine = new Engine(GODOT_CONFIG);
 		lines.forEach((line) => {
 			statusNotice.appendChild(document.createTextNode(line));
 			statusNotice.appendChild(document.createElement('br'));
+			console.log(line);
+			if (line === 'Failed to fetch') {
+				statusNotice.appendChild(document.createElement('br'));
+				statusNotice.appendChild(document.createTextNode('Sebelum melakukan uji coba pada Web Game ini,'));
+				statusNotice.appendChild(document.createElement('br'));
+				statusNotice.appendChild(document.createTextNode('Kami memohon anda untuk membaca README.txt terlebih dahulu'));
+				statusNotice.appendChild(document.createElement('br'));
+				statusNotice.appendChild(document.createTextNode('Terimakasih 🙏'));
+			}
 		});
 	}
 
